@@ -1,0 +1,25 @@
+{
+  "name": "kimkei",
+  "version": "1.0.0",
+  "description": "kimkei.info is shared platform of kei and lovelyz!",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/donginl/kimkei.git"
+  },
+  "author": "donginl",
+  "bugs": {
+    "url": "https://github.com/donginl/kimkei/issues"
+  },
+  "dependencies": {
+    "async": "^1.4.2",
+    "aws-sdk": "^2.2.3",
+    "body-parser": "^1.14.0",
+    "express": "^4.13.1",
+    "ejs": "^2.3.4"
+  }
+}

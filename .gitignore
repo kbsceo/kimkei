@@ -1,0 +1,9 @@
+# OS X Finder Cache
+.DS_Store
+
+# JetBrains IDE Cache
+.idea
+
+# Node.js (NPM) things...
+node_modules
+npm-debug.log
