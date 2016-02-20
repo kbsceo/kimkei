@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <meta name="keywords" content="김케이 케이 Kei kimkei.info 러블리즈"/>
+        <meta name="description" content="케이 팬사이트! 김케이인포"/>
+        <title><%= title %></title>
+        <!-- Bootstrap v3 CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+        <!-- Bootstrap v3 JavaScript -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!-- FontAwesome 4 CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <!-- Common CSS -->
+        <link rel="stylesheet" href="//s.kimkei.info/css/common.min.css"/>
+    </head>
+    <body>
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed">
+                        <span class="sr-only">메뉴 토글</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand">김케이인포</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./news">뉴스</a></li>
+                        <li><a href="./talk">잡담</a></li>
+                        <li><a href="./humor">유머</a></li>
+                        <li><a href="./photo">사진</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="./search"><i class="fa fa-search"></i></a></li>
+                        <li><a href="./login"><i class="fa fa-user"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <%- body -%>
+
+        <footer class="footer">
+            <div class="container text-center white">
+                <p>&copy; 2016&nbsp;<strong>kimkei.info</strong>, 김케이인포</p>
+                <p><a data-toggle="tooltip" data-placement="bottom" title data-original-title="공밀레">만든 사람</a><a href="./privacy" class="border-left">개인정보취급방침</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

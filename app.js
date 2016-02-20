@@ -1,7 +1,7 @@
 // 전역변수를 설정합니다.
 global._status = require('./status');
 global.async = require('async');
-global.database = require('./lib/database');
+// global.database = require('./lib/database');
 
 // 쓸만한 모듈들을 가져와봅시다!
 var express = require('express'),
@@ -16,16 +16,21 @@ var auth = require('./middleware/auth'); */
 var app = express();
 
 // View 엔진으로 ejs 를 씁시다~
+app.engine('ejs', require('ejs-mate'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // 미들웨어들을 가져옵시다.
 // 쿠키랑 Request Body 를 읽을 모듈들을 가져옵시다.
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(log.request());
+// app.use(log.request());
 
 /* // 뭐 그리고 쿠키 기반으로 된 인증을 해봅시다!
 app.use(auth()); */
+
+app.get('/', function(req, res, next) {
+    res.render('index');
+});
 
 /*
 // 404 오류를 먼저 잡아봅시다!
@@ -41,5 +46,5 @@ app.locals.title = '김케이인포 - kimkei.info';
 
 // 서버를 실행하자~
 app.listen(process.env.PORT || 8080, function() {
-    /* log.info(pkg.name + " v" + pkg.version + " server listening on %d port!", process.env.PORT || 8080); */
+    console.info("server listening on %d port!", process.env.PORT || 8080);
 });
