@@ -1,0 +1,76 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body{
+    background: #f1f1f1;
+    font-family: "AppleSDGothicNeo","Nanum Gothic",serif;
+    padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.border-left {
+    border-left: #d5dbde 1px solid;
+    margin-left: 12px;
+    padding-left: 12px;
+}
+
+.navbar {
+    margin-bottom:0;
+}
+
+#jumbotron {
+    background-color: #ec87c0;
+    color: #fff;
+    position: relative;
+    padding: 50px 0 100px;
+    box-sizing: border-box;
+}
+
+#jumbotron+#content {
+    padding-top: 10px;
+}
+
+.white {
+    color: #fff;
+}
+
+.town h1 a, .town h2 a, .town h3 a, .town h4 a, .town h5 a, .town h6 a {
+    color: #333;
+}
+
+.sidebar .panel {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: .3em;
+}
+
+.sidebar .panel-heading {
+    margin: -5px -10px 5px;
+    padding: 7px 10px;
+    font-weight: bold;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.tb {
+    table-layout: fixed;
+}
+
+.tb thead {
+    display: none;
+}
+
+.navbar .dropdown-form {
+    padding: 10px;
+    min-width: 200px;
+}

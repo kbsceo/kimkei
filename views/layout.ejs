@@ -14,7 +14,7 @@
         <!-- FontAwesome 4 CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <!-- Common CSS -->
-        <link rel="stylesheet" href="//s.kimkei.info/css/common.min.css"/>
+        <link rel="stylesheet" href="//s.kimkei.info/css/common.min. css"/>
     </head>
     <body>
         <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
@@ -36,14 +36,44 @@
                         <li><a href="./photo">사진</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="./search"><i class="fa fa-search"></i></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span><span class="hide visible-sm"> 검색</span></a>
+                            <div class="dropdown-menu dropdown-form">
+                                <form action="./search" method="get">
+                                    <input type="text" name="keyword" value="" placeholder="엔터키를 눌러 검색..." class="form-control">
+                                    <button type="submit" class="btn btn-info hide">검색</button>
+                                </form>
+                            </div>
+                        </li>
                         <li><a href="./login"><i class="fa fa-user"></i></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <%- body -%>
-
+        <header id="jumbotron" class="text-center">
+            <div class="container">
+                <div id="title-wrap">
+                    <%- block('jumbotron').toString() %>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="container">
+            <div class="row">
+                <%- body -%>
+                <aside id="sidebar" class="sidebar col col-lg-2 col-sm-2 col-lg-pull-10 col-sm-pull-10">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-file"></i>&nbsp;새로운 글</h3>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-comments"></i>&nbsp;새로운 댓글</h3>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
         <footer class="footer">
             <div class="container text-center white">
                 <p>&copy; 2016&nbsp;<strong>kimkei.info</strong>, 김케이인포</p>

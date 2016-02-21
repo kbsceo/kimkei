@@ -1,5 +1,4 @@
 // 전역변수를 설정합니다.
-global._status = require('./status');
 global.async = require('async');
 // global.database = require('./lib/database');
 
